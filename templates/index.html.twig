@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Instagram Statistics {% endblock %}
+
+{% block body %}
+    {% if instagramAccount %}
+        {% for param in instagramAccount %}
+
+            <p> {{ param.userName }}</p>
+        {% endfor %}
+    {% else %}
+        <p>No user has been found</p>
+    {% endif %}
+{% endblock %}
+{% block javascripts %}{% endblock %}
