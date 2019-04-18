@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Instagram Statistics {% endblock %}
+
+{% block body %}
+    {% if instagramAccount %}
+        {% for param in instagramAccount %}
+
+            <p> {{ param.userName }}</p>
+        {% endfor %}
+    {% else %}
+        <p> {{ infoText }}</p>
+        <form id="searchHashes" action="/searchHashes/">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search for hashes" name="search">
+        </form>
+    {% endif %}
+{% endblock %}
+{% block javascripts %}{% endblock %}

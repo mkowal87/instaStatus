@@ -28,7 +28,7 @@ class InstagramUser
     /**
      * @ORM\Column(type="text")
      */
-    private $surName;
+    private $userLastName;
 
     /**
      * Instagram ID
@@ -77,17 +77,17 @@ class InstagramUser
     /**
      * @return mixed
      */
-    public function getSurName()
+    public function getUserLastName()
     {
-        return $this->surName;
+        return $this->userLastName;
     }
 
     /**
-     * @param mixed $surName
+     * @param mixed $userLastName
      */
-    public function setSurName($surName)
+    public function setUserLastName($userLastName)
     {
-        $this->surName = $surName;
+        $this->userLastName = $userLastName;
     }
 
     /**

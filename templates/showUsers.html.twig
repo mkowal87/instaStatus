@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Instagram Statistics {% endblock %}
+
+{% block body %}
+    {% if instagramAccount %}
+        <table id="articles" class="table table-striped">
+            <thead>
+            <tr>
+                <th>Instagram Name</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for param in instagramAccount %}
+                <tr>
+                    <td>{{ param.userName }}</td>
+                    <td>
+                        <a href="/show/{{ param.userName }}" class="btn btn-dark">Show</a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No user has been found</p>
+    {% endif %}
+{% endblock %}
+{% block javascripts %}{% endblock %}

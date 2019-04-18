@@ -21,7 +21,11 @@
         "symfony/twig-bundle": "*",
         "symfony/validator": "*",
         "symfony/web-link": "*",
-        "symfony/yaml": "*"
+        "symfony/yaml": "*",
+        "mashape/unirest-php": "3.0.*",
+        "phpFastCache/phpFastCache": "5.0.*",
+        "ext-curl": "*",
+        "ext-json": "*"
     },
     "require-dev": {
         "symfony/debug-pack": "*",
